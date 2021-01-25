@@ -1,10 +1,11 @@
-footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding:20px;
-    background-color:#fafafa;
-    p{
-        text-align:center;
+@import "../../Common/Style/Main";
+footer {
+    @include bg-primary;
+    padding: 10px 0px;
+    color: #000;
+    font-weight: 600;
+    p {
+        font-size: 14px;
+        text-align: center;
     }
 }

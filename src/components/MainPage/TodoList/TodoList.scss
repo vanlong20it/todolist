@@ -1,7 +1,26 @@
-.list-item{
-    margin:0 auto;
-    max-height:400px;
+@import "../TodoList/TodoItem/TodoItem";
+@import "../../Common/Style/Main";
+.list-item {
+    margin: 0 auto;
+    max-height: 400px;
     overflow-y: auto;
-    display:grid;
+    display: grid;
     column-gap: 5px;
+    .title-item {
+        .todo-item {
+            @include bg-primary;
+            .check-todo{
+                all:unset;
+                &::before, &::after{
+                    all:unset;
+                }
+            }
+            .delete-todo{
+                all:unset;
+                &::before, &::after{
+                    all:unset;
+                }
+            }
+        }
+    }
 }

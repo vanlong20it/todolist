@@ -1,11 +1,13 @@
-import React from 'react';
-
-function Loader(){
+import React from "react";
+import "./Loader.scss";
+function Loader() {
     return (
-        <strong>
-            Loading...
-        </strong>
-    )
+        <div className="loader">
+            <div className="load-1"></div>
+            <div className="load-1"></div>
+            <div className="load-1"></div>
+        </div>
+    );
 }
 
 export default Loader;

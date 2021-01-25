@@ -1,11 +1,23 @@
-header{
-    background-color:#fafafa;
-    .nav-navbar{
-        padding:10px 0px;
-        text-align:center;
-        .img-logo{
-            width:50px;
+@import "../../Common/Style/Main";
+header {
+    @include bg-primary;
+    padding: 0px 5px;
+    .nav-navbar {
+        padding: 10px 0px;
+        display: grid;
+        grid-template-columns: 30px auto;
+        column-gap:10px;
+        align-items: center;
+        .img-logo {
+            width: 30px;
             height: auto;
+        }
+        .title-app {
+            h1 {
+                color:#fff;
+                font-size: 30px;
+                font-weight: 400;
+            }
         }
     }
 }

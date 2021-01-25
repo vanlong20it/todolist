@@ -1,0 +1,18 @@
+$primary: #65a69a;
+$seconday: #a9d9d4;
+
+@mixin bg-primary {
+    background-color: #65a69a;
+}
+
+@mixin bg-secondary {
+    background-color: #a9d9d4;
+}
+
+@mixin bg-third {
+    background-color: #207335;
+}
+
+@mixin bg-control{
+    background-color: #466e73;
+}

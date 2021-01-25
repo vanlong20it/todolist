@@ -1,15 +1,24 @@
 .main-section {
     display: grid;
     row-gap: 20px;
-    .title-name {
-        h1 {
-            padding:15px 0px;
-            text-align: center;
-            font-size: 30px;
-        }
-    }
+    padding:20px 5px;
+    background-color:#A3BFC0;
     .navbar{
         text-align:center;
+        .date-time{
+            font-size:16px;
+        }
+        .info{
+            padding:10px 0px;
+            ul{
+                list-style: none;
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                li{
+                    font-size:16px;
+                }
+            }
+        }
     }
     .todo-list {
         transition: all 0.3s linear;

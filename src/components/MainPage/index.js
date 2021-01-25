@@ -17,7 +17,7 @@ function MainPage() {
     }, [setTimer]);
 
     useEffect(() => {
-        if (todolist.length !== 0) {
+        if (todolist) {
             const count = todolist.filter((item) => {
                 if (item.status) {
                     return true;
@@ -25,22 +25,22 @@ function MainPage() {
                     return false;
                 }
             });
-            setFinish(count.length);
             setUnfinish(todolist.length - count.length);
+            setFinish(count.length);
         }
     }, [todolist, setFinish]);
 
     return (
         <section className="main-section">
-            <div className="title-name">
-                <h1 className="text-center">Danh sách công việc</h1>
-            </div>
             <div className="navbar">
-                <p>{timer}</p>
-                <p>
-                    Tổng: {todolist.length} | Đã làm: {finish} | Đang làm:{" "}
-                    {unfinish}
-                </p>
+                <p className="date-time">{timer}</p>
+                <div className="info">
+                    <ul>
+                        <li>Tổng: {todolist.length}</li>
+                        <li>Đang làm: {unfinish}</li>
+                        <li>Đã làm: {finish}</li>
+                    </ul>
+                </div>
             </div>
             <div className="todo-form">
                 <TodoForm />

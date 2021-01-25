@@ -7,9 +7,10 @@
 }
 .app {
     max-width: 600px;
-    height: 100vh;
-    margin: 0 auto;
-    position: relative;
+    padding:10px;
+    box-shadow:2px 3px 10px #f1f1f1;
+    margin:0 auto;
+    margin-top:3rem;
     @media screen and (max-width: 1200px) {
         max-width: 600px;
     }

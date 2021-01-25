@@ -1,14 +1,19 @@
 import React from "react";
-import Image from "../../../assets/images/todo.png";
+import { ImageList } from "../../Common/Image/Main";
 import "./Header.scss";
 
 function Header() {
     return (
         <header>
             <nav className="nav-navbar">
-                <a href="/">
-                    <img src={Image} alt="Home" className="img-logo"/>
-                </a>
+                <div className="img-logo">
+                    <a href="/">
+                        <img src={ImageList.logo} alt="Home" className="img-logo" />
+                    </a>
+                </div>
+                <div className="title-app">
+                    <h1>Todo list</h1>
+                </div>
             </nav>
         </header>
     );

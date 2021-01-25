@@ -1,18 +1,18 @@
-import React, { Suspense } from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Common/Header";
-import MainPage from "./components/MainPage";
 import Footer from "./components/Common/Footer";
+import MainPage from "./components/MainPage";
 import "./App.scss";
-import Loader from "./components/Common/Loader";
 const App = () => {
+    useEffect(() => {
+        document.title = "Todolist - LongNguyen";
+    });
     return (
-        <Suspense fallback={<Loader />}>
-            <div className="app">
-                <Header />
-                <MainPage />
-                <Footer />
-            </div>
-        </Suspense>
+        <div className="app">
+            <Header />
+            <MainPage />
+            <Footer />
+        </div>
     );
 };
 

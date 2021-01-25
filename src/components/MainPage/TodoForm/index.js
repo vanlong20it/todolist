@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./TodoForm.scss";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../../actions/todoAction";
-
+import {ImageList} from '../../Common/Image/Main'
 const TodoForm = () => {
     const [value, setValue] = useState("");
     const dispatch = useDispatch();
@@ -38,7 +38,7 @@ const TodoForm = () => {
                 type="submit"
                 className="submit--new-todo"
             >
-                Thêm
+                <img src={ImageList.add} alt="Add"/>
             </button>
         </form>
     );

@@ -1,34 +1,42 @@
+@import "../../Common/Style/Main.scss";
 @mixin form-control {
     font-size: 16px;
     padding: 10px 15px;
     transition: all 0.5s ease-out;
 }
 .form-group {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 35px;
     align-items: center;
+    column-gap:5px;
     .input--new-todo {
         @include form-control;
         width: 100%;
-        border:none;
-        background-color:#ddd;
+        border: none;
+        @include bg-primary;
+        color:#f1f1f1;
         &:focus {
             outline: none;
-            background-color:lightgreen;
+        }
+        &::placeholder{
+            color:#fafafa;
         }
     }
     .submit--new-todo {
         @include form-control;
-        border:none;
+        border: none;
         cursor: pointer;
-        transition:all .25s linear;
-        background-color: green;
-        color:white;
-        &:focus{
-            outline:none;
+        padding:0;
+        transition: all 0.25s linear;
+        background-color: transparent;
+        color: white;
+        line-height:0;
+        &:focus {
+            outline: none;
         }
-        &:hover{
-            background-color:lightgreen;
+        img{
+            width:100%;
+            height:auto;
         }
     }
 }

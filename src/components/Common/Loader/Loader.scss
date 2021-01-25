@@ -1,0 +1,21 @@
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate-animation 2s infinite linear;
+    .load-1 {
+        width: 50px;
+        height: 5px;
+        background-color: green;
+        margin-bottom: 5px;
+    }
+}
+@keyframes rotate-animation {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
