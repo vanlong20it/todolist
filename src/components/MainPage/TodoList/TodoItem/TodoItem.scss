@@ -49,8 +49,8 @@
         }
     }
     .name {
-        word-wrap: break-word;
         text-align: left;
+        word-break: break-word;
     }
     .delete-todo {
         $width: 15px;
