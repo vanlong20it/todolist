@@ -1,0 +1,17 @@
+.main-section {
+    display: grid;
+    row-gap: 20px;
+    .title-name {
+        h1 {
+            padding:15px 0px;
+            text-align: center;
+            font-size: 30px;
+        }
+    }
+    .navbar{
+        text-align:center;
+    }
+    .todo-list {
+        transition: all 0.3s linear;
+    }
+}

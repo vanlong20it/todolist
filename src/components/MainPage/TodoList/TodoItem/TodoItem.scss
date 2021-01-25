@@ -1,0 +1,95 @@
+.todo-item {
+    $green-done: green;
+    display: grid;
+    grid-template-columns: 30px 60% auto 30px;
+    column-gap: 15px;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px 10px;
+    position: relative;
+    text-align:left;
+    margin-bottom:5px;
+    box-shadow: 1px 0px 5px #eee;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: #aaa;
+    }
+    &.done {
+        background-color: darkslategrey;
+        color: #999;
+    }
+    .check-todo {
+        width: 2px;
+        height: 8px;
+        background-color: $green-done;
+        position: relative;
+        transform: rotate(-45deg) translate(0px, 5px);
+        cursor: pointer;
+        &.active {
+            border: 2px red solid;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 15px;
+            background-color: $green-done;
+            top: 0;
+            left: 8px;
+            transform: rotate(90deg);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: -5px;
+            left: 0;
+            transform: rotate(45deg);
+        }
+    }
+    .name {
+        word-wrap: break-word;
+        text-align: left;
+    }
+    .delete-todo {
+        $width: 15px;
+
+        position: relative;
+        width: $width;
+        height: 2px;
+        transform: rotate(-45deg);
+        background-color: red;
+        cursor: pointer;
+        &::after {
+            position: absolute;
+            content: "";
+            width: $width;
+            height: 2px;
+            left: 0px;
+            top: 0px;
+            background-color: red;
+            transform: rotate(90deg);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 2px solid red;
+            top: 100%;
+            left: -30%;
+            transform: rotate(45deg) translate(-30%, -50%);
+        }
+    }
+    @media screen and (max-width: 576px) {
+        column-gap: 5px;
+        grid-template-columns: 20px auto 20px;
+        .date {
+            display: none;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
